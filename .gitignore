@@ -1,0 +1,6 @@
+/.metadata/
+/.git/
+/testing/.settings
+/testing/.classpath
+/testing/.project
+/testing/target/
