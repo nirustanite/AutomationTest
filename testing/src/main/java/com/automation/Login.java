@@ -6,20 +6,21 @@ import com.utils.ExtentReports.ExtentTestManager;
 
 public class Login extends Common{
 
+	
 	public static void CreateAnAccount()
 	{
-		Common.LoadDriver();
-	    Common.openUrl();
-	    if(Common.isElementPresent(Common.read("CheckLogo")))
-	    {
-	    	ExtentTestManager.getTest().log(LogStatus.PASS,"The website is loaded properly");
-	    }
-	    else
-	    {
-	    	ExtentTestManager.getTest().log(LogStatus.FAIL,"The website is not loaded properly");
-	    }
-	    
-	    
+		 Common.click(Common.read("SignIn"));
+		 if(Common.isElementPresent(Common.read("CreateAnAccount")))
+		 {
+		    	//ExtentTestManager.getTest().log(LogStatus.PASS,"Create An account is present"); 
+			 
+			 
+		 }
+		 else
+		 {
+		    	//ExtentTestManager.getTest().log(LogStatus.PASS,"Create An account is not present");
+		    	Common.TakeScreenshotFail();
+		 }
 	}
 	
 }

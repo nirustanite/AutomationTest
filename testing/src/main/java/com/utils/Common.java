@@ -77,6 +77,14 @@ public class Common {
 		    js.executeScript("window.scrollBy(0,1000)");
 	}
 	
+	public static void wait(int seconds)
+	{
+		try {
+			Thread.sleep(seconds * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
 	
 	//Take screenshot if passed.
 	public static void TakeScreenshotPass()
@@ -98,5 +106,16 @@ public class Common {
 	                ExtentTestManager.getTest().addBase64ScreenShot(base64Screenshot));
 	}
 	
+	public static void click(String xpath)
+	{
+		if(isElementPresent(xpath))
+		{
+			driver.findElement(By.xpath(xpath)).click();	
+		}
+		else
+		{
+			TakeScreenshotFail();
+		}
+	}
 	
 }

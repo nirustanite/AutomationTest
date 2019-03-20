@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Suite" parallel="false">
+  <listeners>
+        <listener class-name="com.utils.Listeners.TestListener"/>
+        <listener class-name="com.utils.Listeners.AnnotationTransformer"/>
+    </listeners>
   <test name="Test">
     <classes>
       <class name="com.automation.StartTest"/>

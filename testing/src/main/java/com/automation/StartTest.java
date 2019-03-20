@@ -13,6 +13,7 @@ public class StartTest extends Common {
   
   @Test(priority = 1)
   public void CreateAnAccountUsingNegativeValues() {
+	  HomePage.LoadWebsite();
 	  Login.CreateAnAccount();
 	  
   }
